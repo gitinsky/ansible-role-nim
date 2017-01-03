@@ -16,3 +16,9 @@
 
 - name: make a link to Nim binary
   file: state=link src=/opt/Nim/bin/nim dest=/usr/bin/nim
+
+- name: install nimble
+  shell: cd /opt/Nim && ./koch nimble
+
+- name: make a link to nimble binary
+  file: state=link src=/opt/Nim/bin/nimble dest=/usr/bin/nimble
